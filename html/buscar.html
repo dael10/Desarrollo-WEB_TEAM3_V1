@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Proyecto WEB - Buscar reserva</title>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0" id="contenedor">
+        <header class="p-1" id="header">
+            <div class="row" class="hotel">
+                <div class="col-3 nav-item ms-5" class="menu">
+                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+                </div>
+                <div class="col-8 nav justify-content-end d-flex align-items-center" id="nav">
+                    <ul>
+                        <li><a href="../inicio.html">Inicio</a></li>
+                        <li><a href="ingreso.html">Ingresar</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container" id="contenido">
+            <hr class="m-0">
+            <br>
+            <h2 class="text-center"><b>Buscar reservación</b></h2>
+            <div class="col m-1 p-3" id="busqueda">
+                <form action="" name="frmBuscar">
+                    <div class="mb-3 text-center">
+                        <input type="text" class="shadow bg-body rounded border-primary" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
+                        <img src="../imagenes/lupa.png" alt="" width="23px">                        
+                    </div>
+                    <div class="mb-3 text-center ">
+                        <b>Filtro 1:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro1" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select> 
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 2:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 3:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 4:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 5:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-info" name="btnBuscar" value="Buscar">
+                    </div>                                          
+                </form>              
+            </div>
+            <div id="resultados">
+                <hr>
+                <h2 class="text-center"><b>Resultados</b></h2>                  
+                <form action="reservar.html">
+                    <b>Hotel:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Dirección:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Teléfono:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Estrellas:</b> &nbsp;&nbsp; # &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Tipo de habitaciön:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Habitaciön No.:</b> &nbsp;&nbsp; XXX <br>
+                    <b>Piso:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Capacidad:</b> &nbsp;&nbsp; ## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Minibar:</b> &nbsp;&nbsp; XX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Precio:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-primary" name="btnReservar" value="Reservar">
+                    </div>                                 
+                </form>
+            </div>
+        </div>
+        <br>
+        <div id="footer" class="container-fluid">
+            <hr class="m-0">
+            <footer class="text-center p-1 m-0">
+                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span>TODOS LOS DERECHOS RESERVADOS</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
