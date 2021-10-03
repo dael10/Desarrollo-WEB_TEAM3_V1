@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Reserva;
 use JWTAuth;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class ReservaController extends Controller
@@ -38,5 +40,18 @@ class ReservaController extends Controller
         $doc = JWTAuth::getPayload($token)->toArray()['sub'];
         $history = Reserva::where('doc_cliente',$doc)->get();
         return $history;
+    }
+    public function eliminarR(Request $request)
+    {
+        $data = $request->all();
+        $idReserva = $data['id'];
+        $data['clave'] = Hash::make($data['clave']);
+        $token = $request->bearerToken();
+        $doc = JWTAuth::getPayload($token)->toArray()['sub'];
+        $deleted = Reserva::where('id',$idReserva)->delete($data)!=0;
+    
+      
+        
+       return array('deleted'=>$deleted);
     }
 }
