@@ -29,11 +29,11 @@ Route::post('/Cliente/login', [ClienteController::class, 'login']);
 Route::get('/Habitacion/search', [HabitacionController::class, 'search']);
 Route::get('/Habitacion/filter', [HabitacionController::class, 'filter']);
 Route::get('/Hotel/filter', [HotelController::class, 'filter']);
-Route::get('/TipoHabitacion/filter', [TipoHabitacionController::class, 'filter']);
+// Route::get('/TipoHabitacion/filter', [TipoHabitacionController::class, 'filter']);
 Route::post('/Reservacion/createNR', [ReservaController::class, 'createNR']);
 
 Route::group(['middleware' =>['jwt.verify']], function(){
-    Route::get('/Cliente',[ClienteController::class,'showAll']);
+    // Route::get('/Cliente',[ClienteController::class,'showAll']);
     Route::post('/Cliente/update', [ClienteController::class, 'update']);
     Route::post('/Reservacion/create', [ReservaController::class, 'create']);
     Route::post('/Reservacion/history', [ReservaController::class, 'showByCliente']);

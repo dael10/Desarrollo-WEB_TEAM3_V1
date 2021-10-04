@@ -68,9 +68,7 @@ class ReservaController extends Controller
         $token = $request->bearerToken();
         $doc = JWTAuth::getPayload($token)->toArray()['sub'];
         $deleted = Reserva::where('id',$idReserva)->delete($data)!=0;
-    
-      
-        
+
        return array('deleted'=>$deleted);
     }
 }
