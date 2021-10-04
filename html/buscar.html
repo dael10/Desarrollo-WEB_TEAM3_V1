@@ -77,52 +77,67 @@
                         <input type="text" class="shadow bg-body rounded border-primary" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
                         <img src="../imagenes/lupa.png" alt="" width="23px">                        
                     </div>
-                    <div class="mb-3 text-center ">
-                        <b>Filtro 1:</b>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro1" id="">
-                            <option value="">Seleccione una opción</option>
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
+                    <div class="form-group mb-3 text-center ">
+                        <label for="selPrecio" class="form-label">Precio por noche:</label>
+                        <select class="shadow bg-body rounded border-primary
+                         form-select-sm" name="selPrecio" id="selPrecio">
+                         <option value="">Seleccione una opción</option>
+                         <option value="1">Menor de $100.000</option>
+                         <option value="2">$100.000 - $290.000</option>
+                         <option value="3">$100.000 - $290.000</option>
+                         <option value="4">$300.000 - $490.000</option>
+                         <option value="5">Más de $500.000</option>
                         </select> 
                     </div>
-                    <div class="mb-3 text-center">
-                        <b>Filtro 2:</b>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                    <div class="form-group mb-3 text-center">
+                        <label for="selCategoria" class="form-label">Categoría:</label>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" 
+                            name="selCategoria" id="selCategoria">
                             <option value="">Seleccione una opción</option>
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
+                            <option value="1">1 Estrella</option>
+                            <option value="2">2 EstrellaS</option>
+                            <option value="3">3 EstrellaS</option>
+                            <option value="4">4 EstrellaS</option>
+                            <option value="5">5 EstrellaS</option>
                         </select>
                     </div>
-                    <div class="mb-3 text-center">
-                        <b>Filtro 3:</b>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                    <div class="form-group mb-3 text-center">
+                        <label for="selTipoHab" class="form-label">Tipo de habitación:</label>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="selTipoHab" id="selTipoHab">
                             <option value="">Seleccione una opción</option>
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
+                                <option value="1">Individual</option>
+                                <option value="2">Doble de uso individual</option>
+                                <option value="3">Doble</option>
+                                <option value="4">Múltiple de uso individual</option>
+                                <option value="5">Múltiple de uso doble/option>                    
                         </select>
                     </div>
-                    <div class="mb-3 text-center">
-                        <b>Filtro 4:</b>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
-                            <option value="">Seleccione una opción</option>
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
-                        </select>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="gimnasio">
+                        <label for="gimnasio">Gimnasio</label>
                     </div>
-                    <div class="mb-3 text-center">
-                        <b>Filtro 5:</b>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
-                            <option value="">Seleccione una opción</option>
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
-                        </select>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="spa">
+                        <label for="spa">Spa</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="restaurante">
+                        <label for="restaurante">Restaurante</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="minibar">
+                        <label for="minibar">Minibar</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="checkbox" id="jacuzzi">
+                        <label for="jacuzzi">Jacuzzi</label>
+                    </div>
+                    <div class="form-group mb-4 text-center">
+                        <input type="checkbox" id="balcon">
+                        <label for="balcon">Balcón</label>
                     </div>
                     <div class="text-center">
+                        <button type="reset" class="btn btn-success">Limpiar</button>                            
                         <input type="submit" class="btn btn-info" name="btnBuscar" value="Buscar">
                     </div>                                          
                 </form>              
