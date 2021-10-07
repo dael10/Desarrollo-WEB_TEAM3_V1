@@ -9,8 +9,7 @@
     <title>Proyecto WEB-Historial de Reservas</title>
 </head>
 <body>
-    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
-        id="contenedor">
+    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
         <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
             <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
                 <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
@@ -58,43 +57,83 @@
                 </nav>
             </div>
         </div>
-        <div id="contenido">
+
+        <div class="container-fluid m-0 p-0" id="contenido">
             <hr class="m-0">
             <br>
-            <center><h2><b>Historial de Reservas</b></h2></center>
-            <div id="">
-                <center>                    
-                    <table border="1" width="90%">
-                        <tr>
-                            <th align="center" width="20%"><b>Hotel</b></th>
-                            <th align="center" width="10%"><b>Habitación</b></th>                            
-                            <th align="center" width="10%"><b>Precio</b></th>
-                            <th align="center" width="10%"><b>Fecha de inicio</b></th>
-                            <th align="center" width="10%"><b>Fecha de salida</b></th>
-                            <th align="center" width="10%"><b>Calificación</b></th>
-                            <th align="center" width="20%"><b>Comentarios</b></th>
-                        </tr>
-                        <tr>
-                            <td align="left" width="20%">Hotel A</td>
-                            <td align="center" width="10%"> </td>                            
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="left" width="20%"> </td>
-                        </tr>
-                        <tr>
-                            <td align="left" width="20%">Hotel B</td>
-                            <td align="center" width="10%"> </td>                            
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="center" width="10%"> </td>
-                            <td align="left" width="20%"> </td>
-                        </tr>
-                    </table>
-                    <br><br><br>
-                </center>
+            <div class="container">
+                <h2 class="text-center"><b>HISTORIAL DE RESERVAS</b></h2>
+                <div class="row m-1 p-3" id="busqueda">
+                    <div class="row m-0 p-0">
+                        <form action="historial.html">
+                            <div class="table-responsive-sm">
+                                <table class="table table-striped table-sm table-secondary table-hover table-bordered border-dark"
+                                    id="TblHistorial">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Hotel</th>
+                                            <th scope="col">Habitación</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Fecha de inicio</th>
+                                            <th scope="col">Fecha de salida</th>
+                                            <th scope="col">Calificación</th>
+                                            <th scope="col">Comentarios</th>
+                                            <th scope="col">Acción</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td><input id="option1" type="radio" name="1" value="1">
+                                                <label for="option1">1</label>
+                                            </td>
+
+                                            <td><label for="option1">fnvbbnfg</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">hfdgffgd</label></td>
+                                            <td><label for="option1">fnvbbnfg</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="option2" type="radio" name="1" value="1">
+                                                <label for="option2">1</label>
+                                            </td>
+
+                                            <td><label for="option2">fnvbbnfg</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">hfdgffgd</label></td>
+                                            <td><label for="option2">fnvbbnfg</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="option3" type="radio" name="1" value="1">
+                                                <label for="option3">1</label>
+                                            </td>
+
+                                            <td><label for="option3">fnvbbnfg</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">hfdgffgd</label></td>
+                                            <td><label for="option3">fnvbbnfg</label></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
