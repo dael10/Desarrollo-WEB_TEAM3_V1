@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/estiloBuscar.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Proyecto WEB - Buscar reserva</title>
 </head>
@@ -56,100 +57,289 @@
                 </nav>
             </div>
         </div>
-        <div class="container" id="contenido">
+        <div class="container-fluid m-0 p-0" id="contenido">
             <hr class="m-0">
             <br>
-            <h2 class="text-center"><b>Buscar reservación</b></h2>
-            <div class="col m-1 p-3" id="busqueda">
-                <form action="" name="frmBuscar">
-                    <div class="mb-3 text-center">
-                        <input type="text" class="shadow bg-body rounded border-primary" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
-                        <img src="../imagenes/lupa.png" alt="" width="23px">                        
-                    </div>
-                    <div class="form-group mb-3 text-center ">
-                        <label for="selPrecio" class="form-label">Precio por noche:</label>
-                        <select class="shadow bg-body rounded border-primary
-                         form-select-sm" name="selPrecio" id="selPrecio">
-                         <option value="">Seleccione una opción</option>
-                         <option value="1">Menor de $100.000</option>
-                         <option value="2">$100.000 - $290.000</option>
-                         <option value="3">$100.000 - $290.000</option>
-                         <option value="4">$300.000 - $490.000</option>
-                         <option value="5">Más de $500.000</option>
-                        </select> 
-                    </div>
-                    <div class="form-group mb-3 text-center">
-                        <label for="selCategoria" class="form-label">Categoría:</label>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" 
-                            name="selCategoria" id="selCategoria">
-                            <option value="">Seleccione una opción</option>
-                            <option value="1">1 Estrella</option>
-                            <option value="2">2 EstrellaS</option>
-                            <option value="3">3 EstrellaS</option>
-                            <option value="4">4 EstrellaS</option>
-                            <option value="5">5 EstrellaS</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-3 text-center">
-                        <label for="selTipoHab" class="form-label">Tipo de habitación:</label>
-                        <select class="shadow bg-body rounded border-primary form-select-sm" name="selTipoHab" id="selTipoHab">
-                            <option value="">Seleccione una opción</option>
-                                <option value="1">Individual</option>
-                                <option value="2">Doble de uso individual</option>
-                                <option value="3">Doble</option>
-                                <option value="4">Múltiple de uso individual</option>
-                                <option value="5">Múltiple de uso doble/option>                    
-                        </select>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="checkbox" id="gimnasio">
-                        <label for="gimnasio">Gimnasio</label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="checkbox" id="spa">
-                        <label for="spa">Spa</label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="checkbox" id="restaurante">
-                        <label for="restaurante">Restaurante</label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="checkbox" id="minibar">
-                        <label for="minibar">Minibar</label>
-                    </div>
-                    <div class="form-group text-center">
-                        <input type="checkbox" id="jacuzzi">
-                        <label for="jacuzzi">Jacuzzi</label>
-                    </div>
-                    <div class="form-group mb-4 text-center">
-                        <input type="checkbox" id="balcon">
-                        <label for="balcon">Balcón</label>
-                    </div>
-                    <div class="text-center">
-                        <button type="reset" class="btn btn-success">Limpiar</button>                            
-                        <input type="submit" class="btn btn-info" name="btnBuscar" value="Buscar">
-                    </div>                                          
-                </form>
+            <div class="container">
+                <h2 class="text-center"><b>Buscar reservación...</b></h2>
+                <div class="row m-1 p-3" id="busqueda">
+                    <form action="" name="frmBuscar">
+                        <div class="row m-0 p-0">
+                            <div class="col-6 m-0 p-0 border-end border-1 border-secondary">
+                                <div class="mb-4">
+                                    <h3 class="text-center"><b>Hotel</b></h3>
+                                </div>
+                                <div class="mb-4 text-center">
+                                    <input type="text" class="shadow bg-body rounded border-primary" name="txtBuscar"
+                                        placeholder="Ingrese palabra clave" size="25"> &nbsp;
+                                    <img src="../imagenes/lupa.png" alt="" width="23px" type="submit" name="btnBuscarHotel"
+                                        value="BuscarHotel">
+                                </div>
+                                <div class="form-group mb-4 text-center">
+                                    <label for="selCategoria" class="form-label"><b>Categoría:</b></label>
+                                    <select class="shadow bg-body rounded border-primary form-select-sm" name="selCategoria"
+                                        id="selCategoria">
+                                        <option selected disabled value="">Seleccione una opción</option>
+                                        <option value="1">1 Estrella</option>
+                                        <option value="2">2 Estrellas</option>
+                                        <option value="3">3 Estrellas</option>
+                                        <option value="4">4 Estrellas</option>
+                                        <option value="5">5 Estrellas</option>
+                                    </select>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-3 p-0 m-0">
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="piscina">
+                                            <label for="piscina">Piscina</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="gimnasio">
+                                            <label for="gimnasio">Gimnasio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 p-0 m-0">
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-3 p-0 m-0">
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="spa">
+                                            <label for="spa">Spa</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="restaurante">
+                                            <label for="restaurante">Restaurante</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 p-0 m-0">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 m-0 p-0">
+                                <div class="mb-4">
+                                    <h3 class="text-center"><b>Habitación</b></h3>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-2 p-0 m-0"></div>
+                                    <div class="col-8 p-0 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group mb-3 text-center ms-2">
+                                            <label for="selPrecio" class="form-label"><b>Precio por noche:</b></label>
+                                            <select class="shadow bg-body rounded border-primary form-select-sm"
+                                                name="selPrecio" id="selPrecio">
+                                                <option selected disabled value="">Seleccione una opción</option>
+                                                <option value="1">Menor de $20.000</option>
+                                                <option value="2">$20.000 - $50.000</option>
+                                                <option value="3">$50.000 - $100.000</option>
+                                                <option value="4">$100.000 - $200.000</option>
+                                                <option value="5">$200.000 - $300.000</option>
+                                                <option value="6">Más de $300.000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 p-0 m-0"></div>
+                                </div>
+        
+                                <div class="row p-0 m-0">
+                                    <div class="col-2 p-0 m-0"></div>
+                                    <div class="col-8 p-0 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group mb-3 text-center ms-2">
+                                            <label for="selTipoHab" class="form-label"><b>Tipo de habitación:</b></label>
+                                            <select class="shadow bg-body rounded border-primary form-select-sm"
+                                                name="selTipoHab" id="selTipoHab">
+                                                <option selected disabled value="">Seleccione una opción</option>
+                                                <option value="1">Individual</option>
+                                                <option value="2">Doble de uso individual</option>
+                                                <option value="3">Doble</option>
+                                                <option value="4">Múltiple de uso individual</option>
+                                                <option value="5">Múltiple de uso doble</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 p-0 m-0"></div>
+                                </div>
+        
+                                <div class="row p-0 m-0">
+                                    <div class="col-2 p-0 m-0"></div>
+                                    <div class="col-8 p-0 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group mb-3 ms-2">
+                                            <label for="selNivel" class="form-label"><b>Nivel:</b></label>
+                                            <select class="shadow bg-body rounded border-primary form-select-sm" name="selNivel"
+                                                id="selNivel">
+                                                <option selected disabled value="">Seleccione una opción</option>
+                                                <option value="1">Primer piso</option>
+                                                <option value="2">Segundo piso</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 p-0 m-0"></div>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-2 p-0 m-0">
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="minibar">
+                                            <label for="minibar">Minibar</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" id="jacuzzi">
+                                            <label for="jacuzzi">Jacuzzi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ps-4 m-0 d-flex justify-content-start d-flex align-items-start">
+                                        <div class="form-group mb-4 text-center">
+                                            <input type="checkbox" id="balcon">
+                                            <label for="balcon">Balcón</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 p-0 m-0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-5 p-0 m-0">
+                            </div>
+                            <div class="col-2 p-0 m-0">
+                                <div class="row p-0 m-0">
+                                    <div class="col-6 p-0 m-0">
+                                        <div class="text-center">
+                                            <input type="submit" class="btn btn-info" name="btnBuscar" value="Buscar">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0 m-0">
+                                        <div class="text-center">
+                                            <button type="reset" class="btn btn-danger">Limpiar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 p-0 m-0">
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div id="resultados">
                 <hr>
-                <h2 class="text-center"><b>Resultados</b></h2>                  
-                <form action="reservarRegistrado.html">
-                    <b>Hotel:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Dirección:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Teléfono:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Estrellas:</b> &nbsp;&nbsp; # &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Tipo de habitaciön:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Habitaciön No.:</b> &nbsp;&nbsp; XXX <br>
-                    <b>Piso:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Capacidad:</b> &nbsp;&nbsp; ## &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Minibar:</b> &nbsp;&nbsp; XX &nbsp;&nbsp;&nbsp;&nbsp;
-                    <b>Precio:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>
-                    <div class="text-center">
-                        <input type="submit" class="btn btn-primary" name="btnReservar" value="Reservar">
-                    </div>                                 
-                </form>
+                <div class="row m-0 p-0">
+        
+                    <h2 class="text-center"><b>Resultados</b></h2>
+                </div>
+                <div class="row m-0 p-0">
+        
+                    <form action="reservar.html">
+        
+                        <div class="table-responsive-sm">
+                            <table class="table table-striped table-sm table-secondary table-hover table-bordered border-dark"
+                                id="TblResultados">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Hotel</th>
+                                        <th scope="col">Categoría</th>
+                                        <th scope="col">Ciudad</th>
+                                        <th scope="col">Dirección</th>
+                                        <th scope="col">Teléfono</th>
+                                        <th scope="col">Pscina</th>
+                                        <th scope="col">Gimnasio</th>
+                                        <th scope="col">Restaurante</th>
+                                        <th scope="col">SPA</th>
+                                        <th scope="col">Tipo de Habitación</th>
+                                        <th scope="col">Nivel</th>
+                                        <th scope="col">Balcón</th>
+                                        <th scope="col">Minibar</th>
+                                        <th scope="col">Jacuzzi</th>
+                                        <th scope="col">Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+        
+                                    <tr>
+                                        <td><input id="option1" type="radio" name="1" value="1">
+                                            <label for="option1">1</label>
+                                        </td>
+        
+                                        <td><label for="option1">fnvbbnfg</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">fnvbbnfg</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                        <td><label for="option1">hfdgffgd</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="option2" type="radio" name="1" value="1">
+                                            <label for="option2">1</label>
+                                        </td>
+        
+                                        <td><label for="option2">fnvbbnfg</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">fnvbbnfg</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                        <td><label for="option2">hfdgffgd</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="option3" type="radio" name="1" value="1">
+                                            <label for="option3">1</label>
+                                        </td>
+        
+                                        <td><label for="option3">fnvbbnfg</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">fnvbbnfg</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                        <td><label for="option3">hfdgffgd</label></td>
+                                    </tr>
+        
+                                </tbody>
+                                </select>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <input type="submit" class="btn btn-primary" name="btnReservar" value="Reservar">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <br>
