@@ -59,13 +59,15 @@
             <h1 class="text-center"><b>INGRESO</b></h1>
             <h4 class="text-center p-4"><b>Ingrese sus datos para iniciar sesión.</b></h4>
             <div class="section">
-                <form action="" class="row ">
+                <form action="" class="row">
                     <div class="col-12">
                         <div class="row justify-content-center">
                             <div class="form-goup col-6">
                                 <p>
                                     <b><label for="" class="col-form-label">Direccion de Correo Electronico:</label></b>
                                     <input type="email" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Correo electrónico del Usuario" id="email" name="email">
+                                    <div class="valid-feedback fw-bold">!! Campo correcto ¡¡</div>
+                                    <div class="invalid-feedback fw-bold">Por favor, ingrese correo electrónico</div>
                                 </p>
                             </div>
                         </div>
@@ -74,6 +76,8 @@
                                 <p>
                                     <b><label for="" class="col-form-label">Contraseña:</label></b>
                                     <input type="password" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ingrese contraseña registrada">
+                                    <div class="valid-feedback fw-bold">!! Campo correcto ¡¡</div>
+                                    <div class="invalid-feedback fw-bold">Por favor, ingrese contraseño</div>
                                 </p>
                             </div>
                         </div>
@@ -102,5 +106,27 @@
             </footer>
         </div>
     </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+    </script>
 </body>
 </html>
