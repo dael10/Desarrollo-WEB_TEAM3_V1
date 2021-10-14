@@ -1,0 +1,160 @@
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+        <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
+            <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+                <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+            </div>
+            <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+                <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50" id="header">
+                    <div class="row m-0 p-0">
+                        <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                            <h1 id="title">SANREST</h1>
+                        </div>
+                        <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                            <div class="row container-fluid m-0 p-0">
+                                <div class="col-12 m-0 p-0">
+                                    <div class="row m-0 p-0" class="input-group">
+                                        <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                            <ul>
+                                                <li><a href="login">
+                                                        <button type="submit" class="btn btn-success btn-sm" id="ingreso">Ingresar</button>
+                                                        <img src="assets/imagenes/login.png" width="30px" alt="login" for="ingreso">&nbsp;
+                                                    </a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a href="signup">
+                                                        <button type="submit" class="btn btn-success btn-sm" id="Registrarse">Registrarse</button>
+                                                        <img src="assets/imagenes/register.png" width="30px" alt="Registrarse" for="Registrarse"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="h-25 nav-item">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 d-flex justify-content-start" id="nav">
+                            <ul>
+                                <li><a href="hlogeado">Inicio</a></li>
+                                <li><a href="search">Busqueda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    <div class="container-fluid">
+        <div class="row mt-5 mb-4">
+            <div class="col-6 offset-3">
+                <div class="input-group">
+                    <input type="text" id="search" class="form-control" placeholder="Busqueda de habitaciones" [(ngModel)]="searchText">
+                    <button class="btn btn-outline-primary" type="button" id="search-btn" (click)="search()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="min_floor">Entre el piso</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="min_floor" class="form-control" (keyup)="piso($event)" [(ngModel)]="minFloor">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="max_floor">y el piso</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="max_floor" class="form-control" (keyup)="piso($event)" [(ngModel)]="maxFloor">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="min_floor">Precio entre</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="min_price" class="form-control" (keyup)="precio($event)" [(ngModel)]="minPrice">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="max_floor">y</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="max_price" class="form-control" (keyup)="precio($event)" [(ngModel)]="maxPrice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <label for="capacity" class="form-label">Capacidad:</label>
+                <input type="number" id="capacity" min="1" max="5" class="form-control" (keyup)="capacidad($event)" [(ngModel)]="capacity">
+            </div>
+            <div class="col">
+                <label for="stars" class="form-label">Estrellas: </label>
+                <select id="stars" class="form-control" (change)="estrellas()" [(ngModel)]="stars">
+                    <option value="0">Seleccione</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="minibar" (change)="minibar()"
+                    [(ngModel)]="_minibar">
+                <label class="form-check-label" for="flexCheckDefault">Tiene minibar </label>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row col-6 offset-3">
+            <div class="card result p-3 my-3" *ngFor="let result of results">
+                <div class="row" id="result-1">
+                    <div class="col-3 d-flex align-items-center">
+                        <img src="https://picsum.photos/id/1008/175" alt="foto resultado 1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-7">
+                        <h5 class="my-3">{{ result.id }} </h5>
+                        <h5 class="my-3">{{ result.hotel.nombre }} (<span>{{ result.hotel.ciudad }}</span>)</h5>
+                        <h5 class="my-3">{{ result.tipo.nombre }}</h5>
+                        <h5 class="my-3">$ {{ result.precio }} / noche</h5>
+                        <h5 class="my-3">{{ result.hotel.estrellas }} 
+                        <i class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ result.capacidad }} 
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.minibar == 1">
+                        <i class="fas fa-wine-bottle"></i> minibar</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.balcon == 1">
+                        <i class="fas fa-archway"></i> Balcón</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.jacuzzi == 1">
+                        <i class="fas fa-bath"></i> Jacuzzi</span></h5>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                        <a [routerLink]="['/reservation', result.id]"><button type="submit" class="btn btn-primary btn-sm" id="ingreso">Reservar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

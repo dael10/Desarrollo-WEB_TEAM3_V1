@@ -3,7 +3,6 @@
 namespace App\Models;
 use App\Models\Reserva;
 use App\Models\Hotel;
-use App\Models\TipoHabitacion;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -19,7 +18,6 @@ class Habitacion extends Model
     public function hotel(){
         return $this->belongsTo(Hotel::class);
     }
-
     public function tipo(){
         return $this->belongsTo(TipoHabitacion::class);
     }

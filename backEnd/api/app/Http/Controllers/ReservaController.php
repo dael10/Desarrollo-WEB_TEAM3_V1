@@ -57,7 +57,8 @@ class ReservaController extends Controller
     public function showByCliente(Request $request){
         $token = $request->bearerToken();
         $doc = JWTAuth::getPayload($token)->toArray()['sub'];
-        $history = Reserva::where('doc_cliente',$doc)->get();
+        /* $history = Reserva::where('doc_cliente',$doc)->get(); */
+        $history = Reserva::where('doc_cliente', $doc)->with(['habitacion.hotel', 'habitacion.tipo'])->get();
         return $history;
     }
     public function eliminarR(Request $request)
@@ -70,5 +71,19 @@ class ReservaController extends Controller
         $deleted = Reserva::where('id',$idReserva)->delete($data)!=0;
 
        return array('deleted'=>$deleted);
+    }
+
+    public function updateR(Request $request){
+
+        $data = $request->all();
+        $idReserva = $data['id'];
+        $data['clave'] = Hash::make($data['clave']);
+        $token = $request->bearerToken();
+        $doc = JWTAuth::getPayload($token)->toArray()['sub'];
+        $updated = Reserva::where('id',$idReserva)->update($data)!=0; 
+        return array('updated'=>$updated); 
+
+
+
     }
 }

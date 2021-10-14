@@ -23,7 +23,7 @@ use App\Http\Controllers\TipoHabitacionController;
     return $request->user(); 
 });*/
 /* Route::get('/Cliente',[ClienteController::class,'showAll']); */
-
+Route::group(['middleware' => ['cors']], function(){
 Route::post('/Cliente/signup', [ClienteController::class, 'signup']);
 Route::post('/Cliente/login', [ClienteController::class, 'login']);
 Route::get('/Habitacion/search', [HabitacionController::class, 'search']);
@@ -36,7 +36,9 @@ Route::group(['middleware' =>['jwt.verify']], function(){
     // Route::get('/Cliente',[ClienteController::class,'showAll']);
     Route::post('/Cliente/update', [ClienteController::class, 'update']);
     Route::post('/Reservacion/create', [ReservaController::class, 'create']);
-    Route::post('/Reservacion/history', [ReservaController::class, 'showByCliente']);
+    Route::get('/Reservacion/history', [ReservaController::class, 'showByCliente']);
     Route::delete('/Cliente/eliminar', [ClienteController::class, 'eliminar']);
     Route::delete('/Reserva/eliminarR', [ReservaController::class, 'eliminarR']);
+    Route::post('/Reservacion/updateR', [ReservaController::class, 'updateR']);
+});
 });
