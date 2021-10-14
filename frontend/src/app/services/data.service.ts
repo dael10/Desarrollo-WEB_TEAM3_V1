@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  private API = 'http://127.0.0.1:8000/api';
+  private API = 'https://proyecto-hoteles-g3.herokuapp.com/api';
 
   constructor(private http:HttpClient) { }
   
