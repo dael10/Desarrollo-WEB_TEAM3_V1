@@ -14,7 +14,7 @@ const routes: Routes = [ 
   { path: 'signup', component: SignupComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'profile', component: ProfileComponent },  
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'rhistory', component: RhistoryComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: 'search', component: SearchComponent },

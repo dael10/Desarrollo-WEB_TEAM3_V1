@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  private API = 'https://proyecto-hoteles-g3.herokuapp.com/api';
+  private API = 'http://127.0.0.1:8000/api';
 
   constructor(private http:HttpClient) { }
   
@@ -21,9 +21,9 @@ export class DataService {
     return this.http.post(this.API+'/Cliente/update', data, { headers: this.getTokenHeader() });
   }
 
-  // deleteClient(data: Object): Observable<any> {
-  //   return this.http.delete(this.API + '/Cliente/eliminar', data, { headers: this.getTokenHeader() });
-  // }
+   deleteClient(data: Object): Observable<any> {
+     return this.http.delete(this.API + '/Cliente/eliminar', { headers: this.getTokenHeader() });
+  }
 
   updateReservations(data: Object): Observable<any> {
     return this.http.post(this.API + '/Reservacion/updateR', data, { headers: this.getTokenHeader() });

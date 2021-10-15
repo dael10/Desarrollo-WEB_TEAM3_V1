@@ -17,7 +17,7 @@
                                 <div class="row m-0 p-0" class="input-group">
                                     <div class="col-12 m-0 p-0 d-flex justify-content-end">
                                         <ul>
-                                            <li><a href="">
+                                            <li><a href="home">
                                                     <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar sesión</button>
                                                     <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login" for="cerrar">&nbsp;
                                                 </a></li>
@@ -72,12 +72,30 @@
                 </div>
             </div>
             <div class="row my-4">
-                <div class="col-12 p-0 m-0">
+
+                <div class="col-6 p-0 m-0">
                     <div class="text-center">
                         <button class="btn btn-primary" (click)="update()">Actualizar datos</button>
                     </div>
                 </div>
+                <!-- <div class="col-6 p-0 m-0">
+                    <div class="text-center">
+                        <button class="btn btn-primary" (click)="delete()">Eliminar cuenta</button>
+                    </div>
+                </div> -->
             </div>
+        </div>
+        <div class="card p-4 col-8 offset-2 mt-5" id="update-user-form" [formGroup]="form1" id="colorform">
+        <div class="col">
+            <label for="doc" class="form-label fw-bold">Contraseña: </label>
+            <input type="password" class="form-control" id="password" formControlName="clave">
+        </div>
+        <br>
+        <div class="col-6 p-0 m-0">
+            <div class="text-center">
+                <button class="btn btn-primary" (click)="delete()">Eliminar cuenta</button>
+            </div>
+        </div>
         </div>
     </div>
 </div>
